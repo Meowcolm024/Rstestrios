@@ -15,6 +15,8 @@ int main()
     int a = 5;
     int b = 9;
 
+    cout << a << " " << b << endl;
+
     swap(a,b);
 
     cout << a << " " << b << endl;
