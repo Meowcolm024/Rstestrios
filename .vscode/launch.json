@@ -4,6 +4,20 @@
     // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    {
+        "name": "Launch Python",
+        "type": "python",
+        "request": "launch",
+        "stopOnEntry": true,
+        "pythonPath": "${config:python.pythonPath}",
+        "program": "${file}",
+        "cwd": "",
+        "console": "integratedTerminal",
+        "env": {},
+        "envFile": "${workspaceFolder}/.env",
+        "debugOptions": [],
+        "internalConsoleOptions": "neverOpen"
+        },
         
     {
         "name": "C++ Launch",
