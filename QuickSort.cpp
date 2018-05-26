@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void quick_sort(int arr[],int left, int right)
+void quick_sort(int arr[],int left, int right) //Notice arr[] is pointer
 {
     int i = left, j = right;
     int tmp;
