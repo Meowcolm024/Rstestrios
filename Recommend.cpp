@@ -20,12 +20,17 @@ int main()
     //defining samples
     users friends[user_size] =
     {
-        {3,3},{3,3},{1,2},{2,3}
+        {1,3},{1,2},{1,2},{2,4}
     };
 
-    //remember to chang the list
-    int type_count[user_size] = {0,0,0,0};
-    int tag_count[user_size] = {0,0,0,0};
+    int type_count[user_size];
+    int tag_count[user_size];
+
+    for(int s = 0; s < user_size; s++)
+    {
+        type_count[s] = 0;
+        tag_count[s] = 0;
+    }
 
     for(int i = 0; i < user_size; i++)
     {
@@ -41,11 +46,11 @@ int main()
         }
     }
 
-    int len1=sizeof(type_count)/sizeof(int);
-    int max_type = *max_element(type_count,type_count + len1);
+    int len_type=sizeof(type_count)/sizeof(int);
+    int max_type = *max_element(type_count,type_count + len_type);
 
-    int len2=sizeof(tag_count)/sizeof(int);
-    int max_tag = *max_element(tag_count,tag_count + len2);
+    int len_tag=sizeof(tag_count)/sizeof(int);
+    int max_tag = *max_element(tag_count,tag_count + len_tag);
 
     //output recommendation
     for (int j = 0; j < user_size; j++)
