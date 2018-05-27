@@ -17,11 +17,13 @@ int main()
     char types[4] = {'A','B','C','D'};
     int tags[4] = {1,2,3,4};
     
-    users friends[user_size] =  //defining samples
+    //defining samples
+    users friends[user_size] =
     {
         {3,4},{3,2},{1,2},{2,3}
     };
 
+    //remember to chang the list
     int type_count[user_size] = {0,0,0,0};
     int tag_count[user_size] = {0,0,0,0};
 
@@ -39,6 +41,7 @@ int main()
         }
     }
 
+    //finding the most popular type & tag
     int a = max(type_count[0],type_count[1]);
     int b = max(type_count[2],type_count[3]);
     int max_type = max(a,b);
@@ -47,6 +50,7 @@ int main()
     int d = max(tag_count[2],tag_count[3]);
     int max_tag = max(c,d);
 
+    //output recommendation
     for (int j = 0; j < user_size; j++)
     {
         if (max_type == type_count[j])
