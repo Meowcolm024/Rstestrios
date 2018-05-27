@@ -14,8 +14,10 @@ int main()
     const int user_size = 4;
     const int type_size = 4;
     const int tag_size = 4;
-    char types[4] = {'A','B','C','D'};
-    int tags[4] = {1,2,3,4};
+
+    //defining types & tags
+    char types[type_size] = {'A','B','C','D'};
+    int tags[tag_size] = {1,2,3,4};
 
     //defining samples
     users friends[user_size] =
@@ -32,24 +34,24 @@ int main()
         tag_count[s] = 0;
     }
 
-    for(int i = 0; i < user_size; i++)
+    for (int i = 0; i < user_size; i++)
     {
-        for(int p = 0; p < type_size; p++)
+        for (int p = 0; p < type_size; p++)
         {
             if (friends[i].type == (p+1))
                 type_count[p]++;
         }
-        for(int q = 0; q < tag_size; q++)
+        for (int q = 0; q < tag_size; q++)
         {
             if (friends[i].tag == (q+1))
                 tag_count[q]++;
         }
     }
 
-    int len_type=sizeof(type_count)/sizeof(int);
+    int len_type = sizeof(type_count)/sizeof(int);
     int max_type = *max_element(type_count,type_count + len_type);
 
-    int len_tag=sizeof(tag_count)/sizeof(int);
+    int len_tag = sizeof(tag_count)/sizeof(int);
     int max_tag = *max_element(tag_count,tag_count + len_tag);
 
     //output recommendation
