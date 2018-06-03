@@ -1,11 +1,24 @@
 #include <iostream>
-#include <algorithm>
 
 struct users
 {       
     int type; 
     int tag;  
 };
+
+int max(int arr[],int len)
+{
+    int max = arr[0], i = 1;
+
+    while (i < len)
+    {
+        if (max <= arr[i])
+            max = arr[i];
+        i++;
+    }
+
+    return max;
+}
 
 int main()
 {
@@ -22,7 +35,7 @@ int main()
     //defining samples
     users friends[user_size] =
     {
-        {1,3},{1,2},{1,2},{2,4}
+        {3,3},{3,2},{1,4},{2,4}
     };
 
     int type_count[user_size];
@@ -49,10 +62,9 @@ int main()
     }
 
     int len_type = sizeof(type_count)/sizeof(int);
-    int max_type = *max_element(type_count,type_count + len_type);
-
+    int max_type = max(type_count,len_type);
     int len_tag = sizeof(tag_count)/sizeof(int);
-    int max_tag = *max_element(tag_count,tag_count + len_tag);
+    int max_tag = max(tag_count,len_tag);
 
     //output recommendation
     for (int j = 0; j < user_size; j++)
