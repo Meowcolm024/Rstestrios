@@ -41,7 +41,7 @@ int main()
     int type_count[user_size];
     int tag_count[user_size];
 
-    for(int s = 0; s < user_size; s++)
+    for (int s = 0; s < user_size; s++)
     {
         type_count[s] = 0;
         tag_count[s] = 0;
