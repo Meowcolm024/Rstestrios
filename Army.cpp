@@ -33,7 +33,7 @@ int main()
                 else if (tryans == guess)
                 {
                     count++;
-                    if (count == max_limit && (x == arSize - 1))
+                    if (count == max_limit && x == arSize - 1)
                         break;
                     break;
                 }
@@ -42,12 +42,12 @@ int main()
                     break;
                 }
             }
-            if (count == max_limit && (x == arSize - 1))
+            if (count == max_limit && x == arSize - 1)
                 break;
             x++;
             y = x;
         }
-        if (count == max_limit && (x == arSize - 1))
+        if (count == max_limit && x == arSize - 1)
             break;
         guess++;
         count = 0;
