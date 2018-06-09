@@ -15,9 +15,9 @@ int main()
 
     double guess = 0, count = 0, tryans = 0;
     int x = 0, y = 0;
-    const int max_limit = 10;
-
-    while (count < max_limit)
+    const int max_limit = 12;
+    //can be replaced of any condition 
+    while (count <= max_limit)
     {
         while (x < arSize)
         {
@@ -33,7 +33,7 @@ int main()
                 else if (tryans == guess)
                 {
                     count++;
-                    if (count == max_limit)
+                    if (count == max_limit && (x == arSize - 1))
                         break;
                     break;
                 }
@@ -42,13 +42,13 @@ int main()
                     break;
                 }
             }
-            if (count == max_limit)
+            if (count == max_limit && (x == arSize - 1))
                 break;
             x++;
             y = x;
         }
-        if (count == max_limit)
-                break;
+        if (count == max_limit && (x == arSize - 1))
+            break;
         guess++;
         count = 0;
         x = 0;
