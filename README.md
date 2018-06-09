@@ -4,6 +4,8 @@
 * QuickSort.cpp using quicksort to permutate
 * Permutation.cpp using bubble sort to permutate
 * Swap.cpp swap two intergers
+* Army.cpp 苏丹军队问题，12解的情况
+* Recommend.cpp 简单的推荐系统
 
 <br> 
     All the files here are my testing projects(in C++)
