@@ -4,6 +4,7 @@
     // 如需詳細資訊，請瀏覽: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
     {
         "type": "java",
         "name": "Java Debug (Launch)",
@@ -15,7 +16,7 @@
         "args": ""
     },
     {
-        "name": "Launch Python",
+        "name": "Python Debug (Launch)",
         "type": "python",
         "request": "launch",
         "stopOnEntry": true,
@@ -30,7 +31,7 @@
         },
         
     {
-        "name": "C++ Launch",
+        "name": "C++ Debug (Launch)",
         "type": "cppdbg",
         "request": "launch",
         "preLaunchTask":"clang++",
