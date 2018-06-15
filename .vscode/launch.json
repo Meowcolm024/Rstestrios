@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
     {
+        "type": "java",
+        "name": "Java Debug (Launch)",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "console": "internalConsole",
+        "stopOnEntry": false,
+        "mainClass": "",
+        "args": ""
+    },
+    {
         "name": "Launch Python",
         "type": "python",
         "request": "launch",
