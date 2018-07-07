@@ -33,8 +33,7 @@ def getData(html):
         movieSpan = movieLi.find('div',attrs={'class':'honghe-2'})
         movielevel = movieSpan.find('span').find('i').getText()
 
-        print movieName, movielevel,
-        print
+        print movieName, movielevel, "\n"
  
 #主程序
 basicUrl = 'http://www.imdb.cn/imdb250/'
