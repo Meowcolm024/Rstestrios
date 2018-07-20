@@ -1,3 +1,5 @@
+//Example from C++ Primer Plus
+
 #include <iostream>
 using namespace std;
 const int ArSize = 8;
