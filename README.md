@@ -3,7 +3,6 @@
 * Solvequal.cpp 解二元一次方程组
 * QuickSort.cpp using quicksort to permutate
 * Permutation.cpp using bubble sort to permutate
-* gcd.cpp Calculate the Greatest Common Divisor
 * Army.cpp 苏丹军队问题，12解的情况
 * Recommend.cpp 简单的推荐系统
 
