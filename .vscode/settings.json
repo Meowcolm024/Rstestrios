@@ -18,5 +18,5 @@
         "bitset": "cpp",
         "ios": "cpp"
     },
-    "python.pythonPath": "/usr/bin/python2.7"
+    "python.pythonPath": "/usr/local/bin/python3"
 }
