@@ -69,7 +69,7 @@ width1 = photo1.width()
 height1 = photo1.height()
 
 # draw new image
-balltag = ["a", "b", "c", "d", "e", "f", "g", "h"] # change this list if ballnum is changed
+balltag = ["a", "b", "c", "d", "e", "f", "g", "h"]   # change this list if ballnum is changed
 for t in range(range_min, range_max):
     for m in range(ballnum):
         canvas.create_image(ballx[m][t], bally[m][t], image=photo1, tag=balltag[m])
