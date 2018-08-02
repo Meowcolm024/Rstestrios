@@ -16,7 +16,15 @@
         "utility": "cpp",
         "algorithm": "cpp",
         "bitset": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "typeinfo": "cpp"
     },
     "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
 }
