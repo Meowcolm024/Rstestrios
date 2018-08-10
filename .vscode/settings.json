@@ -24,7 +24,8 @@
         "initializer_list": "cpp",
         "new": "cpp",
         "stdexcept": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "fstream": "cpp"
     },
     "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
 }
