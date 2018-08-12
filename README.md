@@ -1,10 +1,14 @@
-# Some info
+# About it
+
+## Something is here
 
 * Solvequal.cpp 解二元一次方程组
 * QuickSort.cpp using quicksort to permutate
 * BubbleSort.cpp using bubble sort to permutate
 * Army.cpp 苏丹军队问题，12解的情况
 * Recommend.cpp 简单的推荐系统
+
+## Other things
 
 All the files here are my testing projects(in C++)  
 all of them are .cpp file which means they should be compiled before execuating.  
