@@ -2,7 +2,7 @@
 
 ## Something is here
 
-Just look through it :)
+Just look through the codes :)
 
 ## Interesting
 
