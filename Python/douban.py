@@ -1,8 +1,3 @@
-import requests 
-
-url = 'https://movie.douban.com/top250' 
-con = requests.get(url).content
-
 # coding:utf-8 
 import requests 
 from lxml import html 
@@ -21,4 +16,4 @@ for i in sel.xpath('//div[@class="info"]'):
     # 评分 
     rate = i.xpath('div[@class="bd"]/div[@class="star"]/span[2]/text()')[0] 
     # 打印结果看看 
-    print "《", title, "》", rate, country, "\n",
+    print ("《", title, "》", rate, country, "\n")
