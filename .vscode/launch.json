@@ -6,6 +6,36 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - random",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "random",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - circle",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "circle",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello_Dalao",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "Hello_Dalao",
+            "args": ""
+        },
+        {
+            "type": "java",
             "name": "Java Debug (Launch)",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -14,41 +44,38 @@
             "mainClass": "demo.init",
             "args": ""
         },
-    {
-        "name": "Python Debug (Launch)",
-        "type": "python",
-        "request": "launch",
-        "stopOnEntry": true,
-        "pythonPath": "${config:python.pythonPath}",
-        "program": "${file}",
-        "cwd": "",
-        "console": "integratedTerminal",
-        "env": {},
-        "envFile": "${workspaceFolder}/.env",
-        "debugOptions": [],
-        "internalConsoleOptions": "neverOpen"
+        {
+            "name": "Python Debug (Launch)",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${file}",
+            "cwd": "",
+            "console": "integratedTerminal",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [],
+            "internalConsoleOptions": "neverOpen"
         },
-        
-    {
-        "name": "C++ Debug (Launch)",
-        "type": "cppdbg",
-        "request": "launch",
-        "preLaunchTask":"clang++",
-        "program": "${workspaceFolder}/a.out",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": true,
-        "MIMode": "lldb"
-    },
-
-    {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Program",
-        "program": "${file}"
-    },
-
+        {
+            "name": "C++ Debug (Launch)",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "clang++",
+            "program": "${workspaceFolder}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${file}"
+        }
     ]
 }
