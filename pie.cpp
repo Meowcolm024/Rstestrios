@@ -9,6 +9,6 @@ int main()
             pie = pie - static_cast<double>(1 / static_cast<double>(2*i - 1));
         else
             pie = pie + static_cast<double>(1 / static_cast<double>(2*i - 1));
-    cout << "pie: " << pie * 4 << endl;
+    cout << "pi: " << pie * 4 << endl;
     return 0;
 }
