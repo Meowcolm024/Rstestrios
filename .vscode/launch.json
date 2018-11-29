@@ -5,46 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - random",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "random",
-            "args": ""
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - circle",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "circle",
-            "args": ""
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Hello_Dalao",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "Hello_Dalao",
-            "args": ""
-        },
-        {
-            "type": "java",
-            "name": "Java Debug (Launch)",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "console": "internalConsole",
-            "stopOnEntry": false,
-            "mainClass": "demo.init",
-            "args": ""
-        },
-        {
             "name": "Python Debug (Launch)",
             "type": "python",
             "request": "launch",

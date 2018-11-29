@@ -1,6 +1,6 @@
 #include <iostream>
 
-const int len = 5;
+const int len = 7;
 
 void sort(int arr[], int len)
 {
@@ -21,9 +21,10 @@ void sort(int arr[], int len)
 int main()
 {
     using namespace std;
-    int arr[len] = {5,4,1,2,3};
+    int arr[len] = {5,4,1,2,3,7,6};
     sort(arr, len);
     for (int i = 0; i < len; i++)
         cout << arr[i] << " ";
     cout << endl;
+    return 0;
 }
