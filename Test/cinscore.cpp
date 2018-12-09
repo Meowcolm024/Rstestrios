@@ -7,7 +7,7 @@ int main()
     int score[max];
 
     cout << "enter your scores" << endl;
-    cout << "you must enter " << max << "scores" << endl;
+    cout << "you must enter " << max << " scores" << endl;
     
     int i;
 
