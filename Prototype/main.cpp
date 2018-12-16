@@ -17,5 +17,11 @@ int main()
     Saber.showinfo();
     Lancer.showinfo();
 
+    ConstServant.showinfo();
+
+    for (Servant tmp : enemy) {
+        tmp.showinfo();
+    };
+
     return 0;
 }

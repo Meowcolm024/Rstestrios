@@ -18,9 +18,10 @@ private:
     int show_type() {return type;};
 public:
     Servant(std::string s_name, int s_type, int s_lv, int s_atk, int s_hp);
-    void showinfo();
+    void showinfo() const;
     int attack(Servant enemy);
     void damaged(int e_attack) { hp -= e_attack;};
+    ~Servant() {};
 };
 
 Servant::Servant(std::string s_name, int s_type, int s_lv, int s_atk, int s_hp)
@@ -33,7 +34,7 @@ Servant::Servant(std::string s_name, int s_type, int s_lv, int s_atk, int s_hp)
     np = 0;
 };
 
-void Servant::showinfo()
+void Servant::showinfo() const
 {
     std::cout << "NAME: " << name;
     std::cout << " CLASS: " << types[type] << " LV: " << lv;
