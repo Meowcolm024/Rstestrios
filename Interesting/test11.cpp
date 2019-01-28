@@ -10,17 +10,24 @@ int main() {
         cin >> words[i];
     string composed = words[0];
     for (string word : words) {
+        int max, j = 0;
         int cs = composed.size();
         int es = word.size();
-        int i = cs-1, j = 0;
-        while (composed[i] != word[0]) {
-            i--;
-            j++;
+        if (cs > es)
+            max = es;
+        else
+            max = cs;
+        string::size_type index = composed.find(word.substr(0, max), (cs - max));
+        while (index == composed.npos) {
+            max--;
+            index = composed.find(word.substr(0, max), (cs - max));
         }
-        if (j >= es)
-            j = -1;
-        for (int p = j+1; p < es; p++)
-            composed+= word[p];
+        if (max < 1)
+            j = 0;
+        else
+            j = max;
+        for (int p = j; p < es; p++)
+            composed += word[p];
     }
     cout << composed << endl;
     return 0;
