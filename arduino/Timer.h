@@ -1,6 +1,6 @@
 #ifndef TIMER_H_
 #define TIMER_H_
-
+// remove the libraries and namespace
 #include <string>
 using std::string;
 using std::to_string;
@@ -10,11 +10,6 @@ private:
     int min;
     int sec;
 public:
-    Timer() {
-        min = 0;
-        sec = 0; 
-    }
-
     Timer(int m, int s) {
         min = m;
         sec = s; 
@@ -28,6 +23,13 @@ public:
     void reset_time() {
         min = 0;
         sec = 0;
+    }
+
+    bool finished() {
+        if (min ==0 && sec == 0)
+            return true;
+        else
+            return false;
     }
 
     void up() {
@@ -49,7 +51,8 @@ public:
             min--;
         }
     }
-
+    // replace string with String
+    // replace to_string() with String()
     string get_time() {
         string out = "0000";
         string m = to_string(min);
