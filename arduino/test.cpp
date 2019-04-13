@@ -18,5 +18,6 @@ int main() {
     while (!t1.finished()) {
         t1.down();
         cout << t1.get_time() << endl;
+    }
     return 0;
 }
