@@ -71,7 +71,7 @@ class Timer {
 };
 
 void setup() {
-
+  Serial.begin(9600);
 }
 
 Timer t1 = Timer(0, 10);

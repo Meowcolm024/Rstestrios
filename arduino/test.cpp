@@ -17,6 +17,7 @@ int main() {
     cout << t1.get_time() << endl;
     while (!t1.finished()) {
         t1.down();
+        delay(1);
         cout << t1.get_time() << endl;
     }
     return 0;
