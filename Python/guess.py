@@ -3,6 +3,7 @@
 from __future__ import print_function
 from random import randrange
 
+
 def main():
     ans = randrange(0, 10)
     t = 1
@@ -17,7 +18,7 @@ def main():
         elif t > 0:
             print("The number is larger")
         else:
-            print("Correct!")    
+            print("Correct!")
 
 
 if __name__ == "__main__":
