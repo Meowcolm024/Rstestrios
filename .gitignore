@@ -2,3 +2,5 @@
 a.out
 a.out.dSYM
 Python/t1
+others/*.hi
+others/*.o
