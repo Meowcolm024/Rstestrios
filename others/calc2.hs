@@ -48,9 +48,9 @@ separate (op@(Operator _) : xs) ys = separate xs (ys ++ [[op]])
 separate xs ys = let (l, r) = break isOperator xs in separate r (ys ++ [l])
 
 mergeNum :: Tokens -> Tokens
-mergeNum []                = []
-mergeNum op@[(Operator _)] = op
-mergeNum xs                = [Number (read (concatMap show xs) :: Int)]
+mergeNum []              = []
+mergeNum op@[Operator _] = op
+mergeNum xs              = [Number (read (concatMap show xs) :: Int)]
 
 parse :: String -> Token
 parse x = evaluate $ concatMap mergeNum (separate (toTokens x) [])
@@ -59,5 +59,5 @@ main :: IO ()
 main = do
     putStr "calc> "
     n <- getLine
-    print $ parse n
+    print $ parse ('0' : n)
     main
