@@ -5,6 +5,6 @@
         "version": "0.1.0",
         "command": "clang++",
         "isShellCommand": true,
-        "args": ["${file}", "-std=c++11", "-g"],
+        "args": ["${file}", "-std=c++17", "-g"],
         "showOutput": "always"
 }

@@ -8,18 +8,15 @@ vector<int> quickSort(vector<int> vec)
 {
     if (vec.size() <= 1)
         return vec;
-    vector<int> xs, left, right, outl, outr, out;
+    vector<int> left, right;
     int pivot = vec[0];
-    xs.assign(vec.begin(), vec.end());
-    xs.erase(xs.begin());
-    copy_if(xs.begin(), xs.end(), back_inserter(left), [pivot](const int x) { return x <= pivot; });
-    copy_if(xs.begin(), xs.end(), back_inserter(right), [pivot](const int x) { return x > pivot; });
-    outl = quickSort(left);
-    outr = quickSort(right);
-    out.insert(out.end(), outl.begin(), outl.end());
-    out.push_back(pivot);
-    out.insert(out.end(), outr.begin(), outr.end());
-    return out;
+    copy_if(++vec.begin(), vec.end(), back_inserter(left), [pivot](const int x) { return x <= pivot; });
+    copy_if(++vec.begin(), vec.end(), back_inserter(right), [pivot](const int x) { return x > pivot; });
+    left = quickSort(left);
+    right = quickSort(right);
+    left.push_back(pivot);
+    left.insert(left.end(), right.begin(), right.end());
+    return left;
 };
 
 int main()
