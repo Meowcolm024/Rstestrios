@@ -6,7 +6,7 @@ data Eval = Basic Token Token Token
 
 data Token = Operator (Int -> Int -> Int)
            | Number Int
-           | Unknown Char
+           | Unknown String
 
 type Tokens = [Token]
 
@@ -18,7 +18,7 @@ instance Show Token where
 doEval :: Eval -> Token
 doEval (Basic (Number a) (Operator f) (Number b)) = Number (f a b)
 doEval (Complex eva opr nmb) = doEval (Basic (doEval eva) opr nmb)
-doEval _ = Unknown ' '
+doEval _ = Unknown ""
 
 toBasic :: Tokens -> (Eval, Tokens)
 toBasic (a : b : c : xs) = ((Basic a b c), xs)
@@ -30,30 +30,20 @@ toEval (x, (a : b : xs)) = toEval ((Complex x a b), xs)
 evaluate :: Tokens -> Token
 evaluate = doEval . toEval . toBasic
 
-toToken :: Char -> Token
-toToken '+' = Operator (+)
-toToken '-' = Operator (-)
-toToken x   = if isNumber x then Number (digitToInt x) else Unknown x
+toToken :: String -> Token
+toToken "+" = Operator (+)
+toToken "-" = Operator (-)
+toToken x   = if all isNumber x then Number (read x :: Int) else Unknown x
 
-toTokens :: String -> Tokens
-toTokens x = map toToken (filter (/= ' ') x)
-
-isOperator :: Token -> Bool
-isOperator (Operator _) = True
-isOperator _            = False
-
-separate :: Tokens -> [Tokens] -> [Tokens]
-separate [] x = x
-separate (op@(Operator _) : xs) ys = separate xs (ys ++ [[op]])
-separate xs ys = let (l, r) = break isOperator xs in separate r (ys ++ [l])
-
-mergeNum :: Tokens -> Tokens
-mergeNum []              = []
-mergeNum op@[Operator _] = op
-mergeNum xs              = [Number (read (concatMap show xs) :: Int)]
+separate :: String -> [String] -> [String]
+separate []         x  = x
+separate ('+' : xs) ys = separate xs (ys ++ ["+"])
+separate ('-' : xs) ys = separate xs (ys ++ ["-"])
+separate xs ys = let (l, r) = break (`elem` "+-") xs in separate r (ys ++ [l])
 
 parse :: String -> Token
-parse x = evaluate $ concatMap mergeNum (separate (toTokens x) [])
+parse x =
+    evaluate $ map toToken $ separate (filter (`elem` "0123456789+-") x) []
 
 main :: IO ()
 main = do
