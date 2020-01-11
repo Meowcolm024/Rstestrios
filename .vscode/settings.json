@@ -53,7 +53,12 @@
         "streambuf": "cpp",
         "string_view": "cpp",
         "system_error": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp"
     },
     "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
 }
