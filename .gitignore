@@ -4,3 +4,4 @@ a.out.dSYM
 Python/t1
 others/*.hi
 others/*.o
+Python/2048.py
