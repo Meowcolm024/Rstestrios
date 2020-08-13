@@ -53,18 +53,18 @@ move d (Grid x) = case d of
   Ds -> Grid $ transpose . map (reverse . step . reverse) . transpose $ x
 
 gen :: Grid -> IO Grid
-gen (Grid x) = do
+gen (Grid g) = do
   rnd <-
     (sequence . replicate 16)
     $   (\x y z -> x * y * z)
     <$> randomRIO (0, 1)
     <*> randomRIO (0, 1)
     <*> randomRIO (1, 2)
-  return $ Grid $ chunksOf 4 $ add [] (concat x) (map (* 2) rnd)
+  return $ Grid $ chunksOf 4 $ add [] (concat g) (map (* 2) rnd)
 
 add :: [Int] -> [Int] -> [Int] -> [Int]
-add org (x : xs) ly@(y : ys) =
-  if x == 0 then add (org ++ [y]) xs ys else add (org ++ [x]) xs ly
+add org (x : xs) (y : ys) =
+  if x == 0 then add (org ++ [y]) xs ys else add (org ++ [x]) xs ys
 add org _ _ = org
 
 act :: Char -> Act
